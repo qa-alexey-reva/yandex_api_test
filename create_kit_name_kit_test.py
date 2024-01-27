@@ -10,7 +10,7 @@ def get_new_user_token(body):
                              headers=data.headers)
 
 response_token = get_new_user_token(data.user_body)
-data.auth_token["Authorization"] = "Bearer" + response_token.json()["authToken"]
+data.auth_token["Authorization"] = "Bearer " + response_token.json()["authToken"]
 
 # Функция позитивной проверки
 def positive_assert(name):
